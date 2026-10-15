@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MA Royal Wear - Boutique de tements tendance en AlgÃ©rie.">
+  <title>MA Royal Wear | Boutique Officielle</title>
+  <link rel="stylesheet" href="mohamed.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">MA <span>ROYAL WEAR</span></a>
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#boutique">Boutique</a>
+      <a href="#apropos">A propos</a>
+    </nav>
+    <button class="cart-button" onclick="toggleCart()">
+      A Panier <span id="cart-count">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <p class="eyebrow">COLLECTION EXCLUSIVE</p>
+        <h1>LE STYLE EST<br>UNE <span>COURONNE.</span></h1>
+        <p>DÃ©couvrez votre prochain look. Style, qualitÃ© et Ã©lÃ©gance.</p>
+        <a class="gold-button" href="#boutique">DÃ©couvrir la collection â†—</a>
+      </div>
+    </section>
+
+    <section class="shop section" id="boutique">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MA SÃ‰LECTION</p>
+          <h2>Notre Boutique</h2>
+        </div>
+        <p>Le style qui vous distingue.</p>
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-category="Tous">Tout</button>
+        <button class="filter" data-category="Hoodies">Hoodies</button>
+        <button class="filter" data-category="T-shirts">T-shirts</button>
+        <button class="filter" data-category="Pantalons">Pantalons</button>
+        <button class="filter" data-category="Vestes">Vestes</button>
+      </div>
+
+      <div class="products-grid" id="products"></div>
+    </section>
+
+    <section class="about section" id="apropos">
+      <p class="eyebrow">NOTRE UNIVERS</p>
+      <h2>Wear Your <span>Royal Style.</span></h2>
+      <p>MA Royal Wear, votre destination pour un style moderne,
+        des essentiels du quotidien aux piÃ¨ces qui font la diffÃ©rence.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="logo" href="#">MA <span>ROYAL WEAR</span></a>
+    <p>Â© 2026 MA Royal Wear. Tous droits rÃ©servÃ©s.</p>
+    <p>AlgÃ©rie ðŸ‡©ðŸ‡¿</p>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" onclick="toggleCart()"></div>
+  <aside class="cart-panel" id="cart-panel">
+    <div class="cart-heading">
+      <h2>Mon Panier</h2>
+      <button class="close-cart" onclick="toggleCart()">âœ•</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-bottom">
+      <p>Total <strong id="cart-total">0 DA</strong></p>
+      <button class="gold-button full-button" onclick="checkout()">
+        Commander sur WhatsApp
+      </button>
+      <button class="continue" onclick="toggleCart()">â† Continuer mes achats</button>
+    </div>
+  </aside>
+
+  <div id="toast" class="toast"></div>
+  <script src="moha.js"></script>
+</body>
+</html>
